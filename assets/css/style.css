@@ -4,9 +4,13 @@ h1 {
   
 p {
     font-size: 2em;
-    /* text-align: center; */
+    text-align: center;
 }
 
 .buttonChoice {
     margin: 0 10px 0 50px;
 }
+
+/* button {
+   text-align: center;
+} */
