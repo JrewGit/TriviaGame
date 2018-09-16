@@ -36,6 +36,19 @@ var quizQuestions =
         value: "five",
     }];
 
+let correctAnswers = 0;
+let wrongAnswers = 0;
+let unanswered = 0;
+
+function gameOverScreen() {
+    $("#gameDisplay").empty();
+    $("#gameDisplay").append("<div class='col' id='finishScreen'>");
+    $("#finishScreen").append(`<h2>FINISHED!</h2>`);
+    $("#finishScreen").append(`<p>Answers Correct: ${correctAnswers}</p>`);
+    $("#finishScreen").append(`<p>Answers Wrong: ${wrongAnswers}</p>`);
+    $("#finishScreen").append(`<p>Questions Unanswered: ${unanswered}</p>`);
+}
+
 //A function that appends the quizQuestions to the gameDisplay.
 function triviaGame() {
     $("#gameDisplay").append("<div class='col' id='quiz'>");
@@ -93,11 +106,58 @@ function triviaGame() {
     $("#quiz").append("<button id='submit'>Submit</button>");
 
     $("#submit").click(function () {
-        if ($("#button1").is(':checked') && $("#button6").is(':checked') && $("#button8").is(':checked') && $("#button11").is(':checked') && $("#button13").is(':checked')) {
-            console.log("Correct!");
+
+        if ($("#button1").is(":checked")) {
+            // console.log("Correct!");
+            correctAnswers += 1;
+        } else if ($(`#button2`).is(`:checked`) || $(`#button3`).is(`:checked`)) {
+            // console.log("Try Again!")
+            wrongAnswers += 1;
         } else {
-            console.log("Try Again!")
-        }
+            unanswered += 1;
+        };
+
+        if ($("#button6").is(":checked")) {
+            // console.log("Correct!");
+            correctAnswers += 1;
+        } else if ($(`#button4`).is(`:checked`) || $(`#button5`).is(`:checked`)) {
+            // console.log("Try Again!")
+            wrongAnswers += 1;
+        } else {
+            unanswered += 1;
+        };
+
+        if ($("#button8").is(":checked")) {
+            // console.log("Correct!");
+            correctAnswers += 1;
+        } else if ($(`#button7`).is(`:checked`) || $(`#button9`).is(`:checked`)) {
+            // console.log("Try Again!")
+            wrongAnswers += 1;
+        } else {
+            unanswered += 1;
+        };
+
+        if ($("#button11").is(":checked")) {
+            // console.log("Correct!");
+            correctAnswers += 1;
+        } else if ($(`#button10`).is(`:checked`) || $(`#button12`).is(`:checked`)) {
+            // console.log("Try Again!")
+            wrongAnswers += 1;
+        } else {
+            unanswered += 1;
+        };
+
+        if ($("#button13").is(":checked")) {
+            // console.log("Correct!");
+            correctAnswers += 1;
+        } else if ($(`#button14`).is(`:checked`) || $(`#button15`).is(`:checked`)) {
+            // console.log("Try Again!")
+            wrongAnswers += 1;
+        } else {
+            unanswered += 1;
+        };
+
+        gameOverScreen();
     })
 }
 
