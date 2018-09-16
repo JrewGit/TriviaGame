@@ -1,5 +1,12 @@
-#title {
-    margin-bottom: 50px;
+body {
+    font-family: 'Mouse Memoirs', sans-serif;
+    background-color: #113CCF;
+    background-image: linear-gradient(black,blue);    
+    color: #BFF5FD;
+}
+
+.container-fluid {
+    height: 100vh;  
 }
 
 h1 {
@@ -8,7 +15,7 @@ h1 {
 
 h2 {
     text-align: center;
-    margin-bottom: 50px;
+    margin: 50px 0;
   }
   
 p {
@@ -20,10 +27,52 @@ p {
     margin: 0 10px 0 50px;
 }
 
-/* button {
-   text-align: center;
-} */
+#playButtonHolder {
+  text-align: center;
+}
+
+#playGame {
+  font-size: 3em;
+  margin-top: 200px;
+  width: 150px;
+  border-radius: 15px;
+  background-color: #BFF5FD;
+  color: #113CCF;
+}
+
+#playGame:hover {
+  background-color: #be3a8c;
+  font-size: 3.5em;
+}
+
+#submit {
+  font-size: 2em;
+  border-radius: 15px;
+  background-color: #BFF5FD;
+  color: #113CCF;
+  margin-bottom: 25px;
+}
+
+#submit:hover {
+  background-color: #be3a8c;
+  font-size: 2.5em;
+}
+
+#quiz {
+  text-align: center;
+  background-image: linear-gradient(black,blue);    
+}
 
 h3 {
     text-align: center;
+}
+
+
+#time {
+  font-size: 4em;
+}
+
+#submit {
+  margin-left: auto;
+  width: 150px;
 }
